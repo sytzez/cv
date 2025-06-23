@@ -62,7 +62,7 @@ CV.render 'cv.pdf' do
         as a lead developer, product manager and line manager, directly reporting to the CMO.
       TEXT
       bullet <<~TEXT.squish
-        Delivered features in months that were previously on hold for over a year due to unclear requirements.
+        Optimised time to publish a page from 2-3m to 30-50s, which includes regenerating the entire site.
       TEXT
       bullet 'Led successful recruitment, interview process and onboarding for 2 new Ruby developers.'
     end
