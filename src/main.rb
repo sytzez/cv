@@ -111,7 +111,7 @@ CV.render 'cv.pdf' do
             time: '2019'
 
     project 'Games',
-            description: 'I\'ve made countless of small games.',
+            description: 'I\'ve made countless small games.',
             tech: 'Flash, Blitz3D, C# (Unity), C (OpenGL)',
             time: '2006-14'
 
