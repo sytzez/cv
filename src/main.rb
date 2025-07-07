@@ -34,31 +34,32 @@ CV.render 'cv.pdf' do
           AWS, Docker, Terraform, Ansible, Gitlab
         TEXT
       bullet <<~TEXT.squish
-        Led team of another senior developer, a QA and a PM, building dashboard reports and maintaining curriculum progression system which handles ~1.5M questions a day.
+        Led team of another senior developer, a QA and a PM, building and maintaining dashboard reports,
+        student/class management and curriculum progression system which handles ~1.5M questions a day.
       TEXT
       bullet <<~TEXT.squish
         Delivered the 'Fluency Booster' feature which introduced non-linear curriculum progression and other changes,
         reducing the average number of questions to complete a skill from 132 to 53.
       TEXT
       bullet 'Completely rebuilt class, student and subscription management UI in less than a quarter.'
+      bullet 'Fully integrated Xporter API into the product in less than a month.'
       bullet <<~TEXT.squish
         Optimized our most time consuming endpoint from using 13% to 7% of total server time (NewRelic) by batching requests using a Redis queue and Sidekiq.
       TEXT
       bullet 'Optimised queries, reducing one endpoint from an average of 20s to 7s for big schools.'
-      bullet 'Solved security vulnerabilities (1 serious one) and added JWT authentication to services.'
+      bullet 'Found and solved security vulnerabilities (1 serious one) and added JWT authentication to services.'
       bullet 'Made improvements to CI/CD pipeline, adding extra checks and making it easier to deploy and roll back.'
       bullet <<~TEXT.squish
         Untangled and cleaned up code, deleting over 10.000 lines of dead code and restoring browser history functionality#{' '}
         by separating frontend frameworks and replacing PJAX with Turbo.
       TEXT
       bullet 'Built processes to anonymize and archive large amounts of data.'
-      bullet 'Increased productivity of others by automating processes and creating tools for common tasks.'
     end
 
     job 'Head of Digital Development',
         at: 'University of Bath',
         time: 'Apr 2022 - Sep 2023',
-        tech: 'Ruby on Rails, JavaScript (jQuery), Oracle DBMS, Hugo (SSG), Gitlab, PHP' do
+        tech: 'Ruby on Rails, JavaScript (jQuery), Oracle DBMS, Hugo (SSG), Gitlab, PHP, WordPress' do
       bullet <<~TEXT.squish
         Led team of 3 other developers and 1 UX designer, building features for bespoke CMS 'Typecase', acting
         as a lead developer, product manager and line manager, directly reporting to the CMO.
@@ -88,9 +89,9 @@ CV.render 'cv.pdf' do
   end
 
   section 'Education' do
-    job 'BMus Classical Composition',
+    job 'BMus Classical Composition (7.5/10)',
         at: 'Codarts Convervatory',
-        time: '2019 (7.5/10)',
+        time: '2019',
         tech: 'JavaScript, WebGL, GLSL, WebAudio, WebMIDI, SuperCollider',
         link: 'github.com/sytzez/audiovisual' do
       paragraph <<~TEXT.squish
@@ -99,26 +100,98 @@ CV.render 'cv.pdf' do
     end
   end
 
+  section 'Other certifications and scores' do
+    one_liner 'React', description: 'React proficiency test at TestGorilla.', tech: '99th percentile', time: '2025'
+    one_liner 'Typeracer', description: 'Average words typed per minute. Username: sytzez.', tech: '100 WPM',
+                           time: '2025'
+    one_liner 'IELTS C2', description: 'International English Language Testing System.', tech: '8.5/9', time: '2022'
+    one_liner 'Codewars', description: 'Coding challenge leaderboard. Username: sytzez.', tech: '3 kyu', time: '2022'
+    one_liner 'VWO (Gymnasium)',
+              description: 'Preparatory scientific education at Stedelijk Gynmasium Haarlem',
+              time: '2012'
+
+    large_gap
+  end
+
   section 'Personal projects' do
-    project 'Muscade',
-            description: 'Service to render animations from MIDI.',
-            tech: 'Rust (Axum, Bevy), Ffmpeg',
-            time: '2024'
+    paragraph 'A lot of these projects are available on my GitHub. I have many more not listed.'
+    small_gap
 
-    project 'rpsbrawl.com',
-            description: 'Online multiplayer game.',
-            tech: 'Rust (Axum, Tokio), PIXI.js, Websockets',
-            time: '2024'
+    one_liner 'Muscade',
+              description: 'Service to render animations from MIDI.',
+              tech: 'Rust (Axum, Bevy), Ffmpeg',
+              time: '2024'
 
-    project 'Muvis',
-            description: 'Web app to render animations from MIDI and sync to audio.',
-            tech: 'React/Redux, WebGL, GLSL',
-            time: '2019'
+    one_liner 'rpsbrawl.com',
+              description: 'Online multiplayer game.',
+              tech: 'Rust (Axum, Tokio), PIXI.js, Websockets',
+              time: '2024'
 
-    project 'Games',
-            description: 'I\'ve made countless small games.',
-            tech: 'Flash, Blitz3D, C# (Unity), C (OpenGL)',
-            time: '2006-14'
+    one_liner 'its-heavenly.vercel.app',
+              description: 'MIDI re-tuning app made for someone on Fiverr.',
+              tech: 'SolidJS, Tailwind',
+              time: '2023'
+
+    one_liner 'Taskany',
+              description: 'Simple task tracking tool.',
+              tech: 'Rails, Turbo, Hotwire, Tailwind',
+              time: '2023'
+
+    one_liner 'secret-sint.vercel.app',
+              description: 'Secret Santa app for Dutch "Sinterklaas".',
+              tech: 'Rails, React, Tailwind',
+              time: '2023'
+
+    one_liner 'recipe-builder-chi.vercel.app',
+              description: 'Recipe builder and cost calculator.',
+              tech: 'SolidJS, Tailwind',
+              time: '2023',
+              split_at: 140
+
+    one_liner 'Deeplomacy',
+              description: 'Multiplayer strategy game.',
+              tech: 'PHP, Laravel, TypeScript, Angular',
+              time: '2021'
+
+    one_liner 'data-object-tester',
+              description: 'Composer package to help testing plain data objects.',
+              tech: 'PHP, PHPUnit',
+              time: '2021'
+
+    one_liner 'sytzez.github.io/muvis',
+              description: 'Web app to create and sync musical animations.',
+              tech: 'React/Redux, WebGL, GLSL',
+              time: '2019'
+
+    one_liner 'knuistperzik.com',
+              description: 'Website for my friend\'s company.',
+              tech: 'HTML, CSS, JavaScript',
+              time: '2015'
+
+    one_liner 'Raytracer',
+              description: 'A ray tracing renderer for various shapes, using Newton\'s method.',
+              tech: 'Go',
+              time: '2013'
+
+    one_liner 'Handpeer',
+              description: 'FPS game in pure darkness with luminous projectiles.',
+              tech: 'C# (Unity)',
+              time: '2012'
+
+    one_liner 'AirPG',
+              description: 'Multiplayer combat flight sim with RPG elements.',
+              tech: 'Blitz3D, UDP (DirectPlay)',
+              time: '2011'
+
+    one_liner 'Space Stations',
+              description: '3D RTS game with multiplayer support.',
+              tech: 'Blitz3D, UDP (DirectPlay)',
+              time: '2009'
+
+    one_liner 'Other games',
+              description: 'I\'ve made countless small games.',
+              tech: 'Flash, Blitz3D, C# (Unity), C (OpenGL)',
+              time: '2006-14'
 
     large_gap
 

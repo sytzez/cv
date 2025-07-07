@@ -59,13 +59,14 @@ class CV
     large_gap
   end
 
-  def project(*, description:, tech:, time:)
+  def one_liner(*, description:, time:, tech: nil, split_at: 120)
     cursor.tap do |y|
       condensed { text(*) }
-      light { text_box(description, at: [67, y]) }
-      condensed { text_box(tech, at: [0, y], width: bounds.right - 45, align: :right) }
+      light { text_box(description, at: [split_at, y]) }
+      condensed { text_box(tech, at: [0, y], width: bounds.right - 45, align: :right) } if tech
       condensed { text_box(time, at: [0, y], align: :right) }
     end
+    small_gap
   end
 
   def paragraph(*)
