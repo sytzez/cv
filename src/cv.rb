@@ -39,7 +39,7 @@ class CV
     yield
   end
 
-  def job(*, at:, time:, tech:, link: nil, &)
+  def job(*, at:, time:, tech: nil, link: nil, &)
     cursor.tap do |y|
       mid_condensed do
         text(*)
@@ -48,13 +48,15 @@ class CV
       end
     end
     small_gap
-    cursor.tap do |y|
-      condensed do
-        text(tech)
-        text_box(link, at: [0, y], align: :right) if link
+    if tech || link
+      cursor.tap do |y|
+        condensed do
+          text(tech) if tech
+          text_box(link, at: [0, y], align: :right) if link
+        end
       end
+      mid_gap
     end
-    mid_gap
     yield
     large_gap
   end

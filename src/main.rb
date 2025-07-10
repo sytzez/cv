@@ -58,7 +58,7 @@ CV.render 'cv.pdf' do
 
     job 'Head of Digital Development',
         at: 'University of Bath',
-        time: 'Apr 2022 - Sep 2023',
+        time: 'Sep 2022 - Sep 2023',
         tech: 'Ruby on Rails, JavaScript (jQuery), Oracle DBMS, Hugo (SSG), Gitlab, PHP, WordPress' do
       bullet <<~TEXT.squish
         Led team of 3 other developers and 1 UX designer, building features for bespoke CMS 'Typecase', acting
@@ -74,6 +74,9 @@ CV.render 'cv.pdf' do
       bullet 'Led successful recruitment, interview process and onboarding for 2 new Ruby developers.'
     end
 
+    job 'Ruby Developer', at: 'University of Bath', time: 'Apr 2022 - Aug 2023' do
+    end
+
     job 'Full-stack Developer',
         at: 'Endeavour Group',
         time: 'Oct 2019 - Mar 2022',
@@ -85,8 +88,11 @@ CV.render 'cv.pdf' do
       bullet 'Implemented GraphQL layer, chat, inappropriate picture detection and led front-end on new dating app.'
       bullet 'Implemented activity feed, shared photo albums and location based notifications on social media app.'
       bullet 'Vastly improved and performance optimised product search and check-out flow on wine webshop.'
+      bullet 'Mentored trainees and interns and held tech presentations'
     end
   end
+
+  start_new_page
 
   section 'Education' do
     job 'BMus Classical Composition (7.5/10)',
