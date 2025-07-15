@@ -91,5 +91,5 @@ class CV
 
   def small_gap = move_down 2
   def mid_gap = move_down 4
-  def large_gap = move_down 10
+  def large_gap = move_down 8
 end
