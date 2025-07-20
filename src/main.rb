@@ -66,7 +66,7 @@ CV.render 'cv.pdf' do
     end
     job 'Ruby Developer',
         at: 'University of Bath',
-        time: 'Apr 2022 - Aug 2023',
+        time: 'Apr 2022 - Aug 2022',
         tech: 'Ruby on Rails, JavaScript (jQuery), Oracle DBMS, Hugo (SSG), GitLab CI/CD, PHP, WordPress' do
       bullet <<~TEXT.squish
         Led team of 3 other developers and 1 UX designer, building features for bespoke CMS 'Typecase', acting
